@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import PrivateRoute from './components/PrivateRoute'
 import AdminPanel from './pages/AdminPanel'
 import CreateEmployee from './pages/CreateEmployee'
+import Edit from './pages/Edit'
 const App = () => {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ const App = () => {
     <Route element={<PrivateRoute/>}>
            <Route path='/admin-panel' element={<AdminPanel />}/>
            <Route path='/create-employee' element={<CreateEmployee />} />
+           <Route path='/edit/:id' element={<Edit />} />
       </Route>
       <Route path='/' element={<Home />} />
       <Route path='/signup' element={<SignUp />} />

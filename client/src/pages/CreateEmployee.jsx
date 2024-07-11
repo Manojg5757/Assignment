@@ -7,9 +7,11 @@ import {
   } from "firebase/storage";
 import app from '../../firebase'
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const CreateEmployee = () => {
     const[file,setFile] = useState(undefined)
+    const navigate = useNavigate()
     const[filePerc,setFilePerc] = useState(0)
     const[fileUploadError,setFileUploadError] = useState(false)
     const[formData,setFormData] = useState({
@@ -95,6 +97,7 @@ const CreateEmployee = () => {
         try {
             const res = await axios.post('/server/employee/create',formData)
             console.log(res.data)
+            navigate('/admin-panel')
         } catch (error) {
             console.log(error)
         }
