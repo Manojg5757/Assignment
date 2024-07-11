@@ -3,6 +3,7 @@ import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import authRouter from "./routes/auth.route.js";
+import employeeRouter from "./routes/employee.route.js";
 
 dotenv.config()
 
@@ -21,6 +22,7 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/server/auth',authRouter)
+app.use('/server/employee',employeeRouter)
 
 const port = 3000
 

@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Navbar from './components/Navbar'
 import PrivateRoute from './components/PrivateRoute'
 import AdminPanel from './pages/AdminPanel'
+import CreateEmployee from './pages/CreateEmployee'
 const App = () => {
   return (
     <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => {
     <Routes>
     <Route element={<PrivateRoute/>}>
            <Route path='/admin-panel' element={<AdminPanel />}/>
+           <Route path='/create-employee' element={<CreateEmployee />} />
       </Route>
       <Route path='/' element={<Home />} />
       <Route path='/signup' element={<SignUp />} />
