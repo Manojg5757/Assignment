@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
 
 const SignUp = () => { 
+  const navigate = useNavigate()
   const[formData,setFormData] = useState({
     username:"",
     email:"",
@@ -20,6 +22,7 @@ const SignUp = () => {
    e.preventDefault()
    try {
     const res = await axios.post('/server/auth/signup',formData)
+    navigate('/login')
     console.log(res.data)
    } catch (error) {
     console.log(error)
