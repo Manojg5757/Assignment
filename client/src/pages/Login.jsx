@@ -39,7 +39,7 @@ const Login = () => {
   console.log(formData);
   return (
     <div className="">
-      <h1 className="text-center">Login</h1>
+      <h1 className="text-center text-2xl mt-7">Login</h1>
       <form
         onSubmit={handleSubmit}
         className="flex flex-col gap-4 max-w-xl mx-auto p-3"
