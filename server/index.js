@@ -20,10 +20,6 @@ const __dirname = path.resolve();
 app.use(express.json())
 app.use(cors())
 
-app.get('/',(req,res)=>{
-    res.json({name:"Manoj"})
-})
-
 app.use('/server/auth',authRouter)
 app.use('/server/employee',employeeRouter)
 
